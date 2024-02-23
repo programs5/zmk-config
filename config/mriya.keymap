@@ -23,10 +23,10 @@
 
         default_layer {
             bindings = <
-  &kp GRAVE  &kp Q  &kp W       &kp E    &kp R      &kp T        &kp Y      &kp U            &kp I      &kp O             &kp P     &kp LC(LA(O))
-  &kp LCTRL  &kp A  &kp S       &kp D    &kp F      &kp G        &kp H      &kp J            &kp K      &kp L             &kp SEMI  &kp LA(LC(T))
-  &kp LALT   &kp Z  &kp X       &kp C    &kp V      &kp B        &kp N      &kp M            &kp COMMA  &kp DOT           &kp FSLH  &mt RALT BSLH
-                    &kp LC(N1)  &kp ESC  &lt 4 DEL  &kp ENTER    &kp SPACE  &lt 5 BACKSPACE  &kp TAB    &kp LC(NUMBER_2)
+  &kp LS(F10)    &kp Q  &kp W                 &kp E    &kp R      &kp T        &kp Y      &kp U            &kp I      &kp O                  &kp P     &kp LC(LA(O))
+  &kp LC(N0)     &kp A  &kp S                 &kp D    &kp F      &kp G        &kp H      &kp J            &kp K      &kp L                  &kp SEMI  &kp LC(NUMBER_1)
+  &kp LC(SLASH)  &kp Z  &kp X                 &kp C    &kp V      &kp B        &kp N      &kp M            &kp COMMA  &kp DOT                &kp FSLH  &kp LC(LA(T))
+                        &kp LEFT_PARENTHESIS  &kp ESC  &lt 4 DEL  &kp ENTER    &kp SPACE  &lt 5 BACKSPACE  &kp TAB    &kp RIGHT_PARENTHESIS
             >;
         };
 
