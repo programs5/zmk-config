@@ -18,65 +18,69 @@
 quick-tap-ms = <75>;
 
 tapping-term-ms {
-    = <500>;};
+    = <
+
+    500 = >;
+};
 
 /
 
-    keymap {
-        compatible = "zmk,keymap";
+keymap {
+    compatible = "zmk,keymap";
 
-        default_layer {
-            bindings = <
+    default_layer {
+        bindings = <
   &kp LS(F10)    &kp Q           &kp W                 &kp E             &kp R               &kp T        &kp Y      &kp U                &kp I             &kp O                  &kp P                    &kp LC(LA(O))
   &kp LC(N0)     &mt LEFT_WIN A  &mt LEFT_ALT S        &mt LEFT_SHIFT D  &mt LEFT_CONTROL F  &kp G        &kp H      &mt RIGHT_CONTROL J  &mt LEFT_SHIFT K  &mt RIGHT_ALT L        &mt RIGHT_WIN SEMICOLON  &kp LC(NUMBER_1)
   &kp LC(SLASH)  &kp Z           &kp X                 &kp C             &kp V               &kp B        &kp N      &kp M                &kp COMMA         &kp DOT                &kp FSLH                 &kp LC(LA(T))
                                  &kp LEFT_PARENTHESIS  &kp ESC           &lt 4 DEL           &kp ENTER    &kp SPACE  &lt 1 BACKSPACE      &kp TAB           &kp RIGHT_PARENTHESIS
-            >;
-        };
+        >;
+    };
 
-        lower_layer {
-            bindings = <
+    lower_layer {
+        bindings = <
   &none  &kp F1    &kp F2  &kp F3    &kp F4    &kp F5       &kp F6     &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
   &none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &none
   &none  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &none
-                   &none   &none     &none     &none        &none      &none     &none     &none
-            >;
-        };
+                   &none   &none     &none     &none        &trans     &none     &none     &none
+        >;
+    };
 
-        raise_layer {
-            bindings = <
+    raise_layer {
+        bindings = <
   &kp KP_NUM       &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS
   &mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS     &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
   &trans           &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT      &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &trans
                                     &trans     &trans     &trans     &lt 3 RET       &lt 3 ESC     &trans    &trans     &trans
-            >;
-        };
+        >;
+    };
 
-        adjust_layer {
-            bindings = <
+    adjust_layer {
+        bindings = <
   &bootloader  &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &bootloader
   &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
   &sys_reset   &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &sys_reset
                              &none         &trans        &none         &trans          &trans        &none         &trans        &none
-            >;
-        };
+        >;
+    };
 
-        layer_4 {
-            bindings = <
+    layer_4 {
+        bindings = <
   &trans  &trans        &trans        &trans          &trans            &trans    &trans  &trans    &kp UP_ARROW  &kp RIGHT_BRACKET  &kp LEFT_BRACKET      &trans
   &trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans    &trans  &kp LEFT  &kp DOWN      &kp RIGHT          &kp SINGLE_QUOTE      &trans
   &trans  &kp LC(Z)     &kp LC(X)     &kp LC(C)       &kp LC(V)         &trans    &trans  &trans    &kp MINUS     &kp EQUAL          &kp NON_US_BACKSLASH  &trans
                         &trans        &trans          &trans            &trans    &trans  &trans    &trans        &trans
-            >;
-        };
+        >;
+    };
 
-        layer_5 {
-            bindings = <
+    layer_5 {
+        bindings = <
   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-            >;
-        };
+        >;
     };
+};
+
 };
