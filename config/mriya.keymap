@@ -15,9 +15,9 @@
 
 &lt { quick_tap_ms = <200>; };
 
-&mt {
-};
+&mt { quick_tap_ms = <200>; };
 
+/*
 quick-tap-ms = <75>;
 
 tapping-term-ms {
@@ -25,8 +25,9 @@ tapping-term-ms {
 
     500 = >;
 };
+*/
 
-/
+/{
 
 keymap {
     compatible = "zmk,keymap";
