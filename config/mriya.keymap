@@ -17,20 +17,16 @@
 
 &mt { quick_tap_ms = <200>; };
 
-/*
-quick-tap-ms = <75>;
-
-tapping-term-ms {
-    = <
-
-    500 = >;
-};
-*/
-
-
 
 /{
+    combos {
+        compatible = "zmk,combos";
 
+        clcl {
+            bindings = <&kp LC(Q)>;
+            key-positions = <4 3>;
+        };
+    };
 
     behaviors {
         bhm: balanced_homerow_mods {
@@ -44,8 +40,6 @@ tapping-term-ms {
         };
     };
 
-
-
 keymap {
     compatible = "zmk,keymap";
 
@@ -54,24 +48,24 @@ keymap {
   &kp LS(F10)    &kp Q           &kp W                 &kp E             &kp R               &kp T        &kp Y      &kp U                &kp I             &kp O                  &kp P                    &kp LC(LA(O))
   &kp LC(N0)     &bhm LEFT_WIN A  &bhm LEFT_ALT S        &bhm LEFT_SHIFT D  &bhm LEFT_CONTROL F  &kp G        &kp H      &bhm RIGHT_CONTROL J  &bhm LEFT_SHIFT K  &bhm RIGHT_ALT L        &bhm RIGHT_WIN SEMICOLON  &kp LC(NUMBER_1)
   &kp LC(SLASH)  &kp Z           &kp X                 &kp C             &kp V               &kp B        &kp N      &kp M                &kp COMMA         &kp DOT                &kp FSLH                 &kp LC(LA(T))
-                                 &kp LEFT_PARENTHESIS  &kp ESC           &lt 1 DEL           &kp ENTER    &kp SPACE  &lt 2 BACKSPACE      &kp TAB           &kp RIGHT_PARENTHESIS
+                                 &kp LEFT_PARENTHESIS  &kp ESC           &lt 1 DEL         &kp ENTER    &kp SPACE  &lt 2 BACKSPACE      &kp TAB           &kp RIGHT_PARENTHESIS
         >;
     };
 
      lower_layer {
         bindings = <
   &trans  &trans        &trans        &trans          &trans            &trans    &trans  &trans    &kp UP_ARROW  &kp RIGHT_BRACKET  &kp LEFT_BRACKET      &trans
-  &trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans    &trans  &kp LEFT  &kp DOWN      &kp RIGHT          &kp SINGLE_QUOTE      &trans
-  &trans  &kp LC(Z)     &kp LC(X)     &kp LC(C)       &kp LC(V)         &trans    &trans  &trans    &kp MINUS     &kp EQUAL          &kp NON_US_BACKSLASH  &trans
+  &kp LBRC  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans    &trans  &kp LEFT  &kp DOWN      &kp RIGHT          &kp SINGLE_QUOTE      &kp RBRC
+  &kp LBKT  &kp LC(Z)     &kp LC(X)     &kp LC(C)       &kp LC(V)         &trans    &trans  &trans    &kp MINUS     &kp EQUAL          &kp NON_US_BACKSLASH  &kp RBKT
                         &trans        &trans          &trans            &trans    &trans  &trans    &trans        &trans
         >;
     };
 
     raise_layer {
         bindings = <
-  &trans  &kp F1    &kp F2  &kp F3    &kp F4    &kp F5       &kp F6     &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
-  &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &trans
+  &trans  &kp F1    &kp F2  &kp F3    &kp F4    &kp F5       &kp F6     &kp F7    &kp F8    &kp F9    &kp F10   &kp F11  
   &trans  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &trans
+  &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &trans
                     &trans  &trans    &trans    &trans       &trans     &trans    &trans    &trans
         >;
     };
@@ -83,9 +77,7 @@ keymap {
   &sys_reset   &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &sys_reset
                              &none         &trans        &none         &trans          &trans        &none         &trans        &none
         >;
-    };
-
-   
+    };   
 
 };
 
