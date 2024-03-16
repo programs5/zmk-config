@@ -68,7 +68,7 @@
 
         lower_layer {
             bindings = <
-  &trans    &trans        &trans        &trans          &trans            &trans    &kp INS    &kp END        &kp UP_ARROW  &kp RIGHT_BRACKET  &kp LEFT_BRACKET      &trans
+  &trans    &trans        &trans        &trans          &trans            &trans    &kp INS    &kp END        &kp UP_ARROW  &kp RIGHT_BRACKET  &kp LEFT_BRACKET      &kp TILDE
   &kp LBRC  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans    &kp HOME   &kp LEFT       &kp DOWN      &kp RIGHT          &kp SINGLE_QUOTE      &kp RBRC
   &kp LBKT  &kp LC(Z)     &kp LC(X)     &kp LC(C)       &kp LC(V)         &trans    &kp PG_UP  &kp PAGE_DOWN  &kp MINUS     &kp EQUAL          &kp NON_US_BACKSLASH  &kp RBKT
                           &trans        &trans          &trans            &trans    &trans     &trans         &trans        &trans
